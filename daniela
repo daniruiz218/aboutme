@@ -1,277 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>home</title>
+<meta charset="UTF-8">
+<title>my homepage</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: #f7d6e6;
+  color: #5a2a3a;
+}
 
-    body {
-      margin: 0;
-      background: linear-gradient(to bottom, #ffd9e8, #ffeef5);
-      color: #5b3142;
-      font-family: 'Quicksand', sans-serif;
-      overflow-x: hidden;
-    }
+/* header */
+.header {
+  background: #f6f0dc;
+  text-align: center;
+  padding: 40px 20px;
+}
 
-    .sparkle {
-      position: fixed;
-      font-size: 18px;
-      opacity: 0.45;
-      pointer-events: none;
-      animation: float 6s ease-in-out infinite;
-    }
+.header h1 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 3.5rem;
+  margin: 0;
+}
 
-    .s1 { top: 7%; left: 8%; }
-    .s2 { top: 18%; right: 10%; animation-delay: 1s; }
-    .s3 { top: 42%; left: 5%; animation-delay: 2s; }
-    .s4 { top: 60%; right: 7%; animation-delay: 3s; }
-    .s5 { bottom: 12%; left: 12%; animation-delay: 4s; }
-    .s6 { bottom: 18%; right: 15%; animation-delay: 5s; }
+.header p {
+  margin-top: 10px;
+  font-style: italic;
+}
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-    }
+/* grid layout */
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
-    header {
-      text-align: center;
-      padding: 60px 20px 30px;
-    }
+/* blocks */
+.block {
+  padding: 30px;
+}
 
-    h1 {
-      margin: 0;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 4rem;
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
+.red {
+  background: #e63946;
+  color: white;
+}
 
-    .subtitle {
-      margin-top: 10px;
-      font-size: 1.1rem;
-      font-style: italic;
-    }
+.cream {
+  background: #f6f0dc;
+}
 
-    .intro {
-      max-width: 720px;
-      margin: 0 auto 30px;
-      text-align: center;
-      line-height: 1.8;
-      padding: 0 20px;
-      font-size: 1rem;
-    }
+.pink {
+  background: #ffd6e7;
+}
 
-    .layout {
-      width: 92%;
-      max-width: 1250px;
-      margin: 0 auto 70px;
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 24px;
-      align-items: start;
-    }
+.block h2 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2rem;
+}
 
-    .card {
-      background: rgba(255, 248, 251, 0.92);
-      border: 1.5px solid #efabc4;
-      border-radius: 22px;
-      padding: 16px;
-      box-shadow: 0 10px 25px rgba(155, 92, 119, 0.12);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
+.block img {
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 15px;
+}
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 30px rgba(155, 92, 119, 0.18);
-    }
+/* full width section */
+.full {
+  padding: 40px;
+  text-align: center;
+}
 
-    .card img {
-      width: 100%;
-      display: block;
-      border-radius: 16px;
-      margin-top: 12px;
-      object-fit: cover;
-    }
+/* fun sticker text */
+.sticker {
+  background: #ff8fab;
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
 
-    .card h2 {
-      margin: 0;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      font-weight: 600;
-    }
-
-    .card p {
-      margin: 10px 0 0;
-      line-height: 1.7;
-      font-size: 0.98rem;
-    }
-
-    .me {
-      grid-column: span 5;
-      transform: rotate(-1.2deg);
-    }
-
-    .biology {
-      grid-column: span 4;
-      transform: rotate(1deg);
-    }
-
-    .drinks {
-      grid-column: span 3;
-      transform: rotate(-1deg);
-    }
-
-    .butterfly {
-      grid-column: span 4;
-      transform: rotate(1.2deg);
-    }
-
-    .cat1 {
-      grid-column: span 4;
-      transform: rotate(-1.3deg);
-    }
-
-    .cat2 {
-      grid-column: span 4;
-      transform: rotate(1deg);
-    }
-
-    .note {
-      grid-column: span 12;
-      text-align: center;
-      background: transparent;
-      border: none;
-      box-shadow: none;
-      padding-top: 8px;
-    }
-
-    .note p {
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1rem;
-      line-height: 1.9;
-    }
-
-    footer {
-      text-align: center;
-      padding: 10px 20px 50px;
-      font-size: 0.95rem;
-      color: #7a5262;
-    }
-
-    @media (max-width: 900px) {
-      .layout {
-        grid-template-columns: 1fr;
-      }
-
-      .me, .biology, .drinks, .butterfly, .cat1, .cat2, .note {
-        grid-column: span 1;
-        transform: none;
-      }
-
-      h1 {
-        font-size: 3rem;
-      }
-    }
-  </style>
+/* mobile */
+@media(max-width: 800px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
+
 <body>
-  <div class="sparkle s1">✿</div>
-  <div class="sparkle s2">♡</div>
-  <div class="sparkle s3">⋆</div>
-  <div class="sparkle s4">✿</div>
-  <div class="sparkle s5">♡</div>
-  <div class="sparkle s6">⋆</div>
 
-  <header>
-    <h1>pieces of me</h1>
-    <div class="subtitle">a homepage made out of the things i love most</div>
-  </header>
+<div class="header">
+  <h1>daniela's world</h1>
+  <p>a collection of things i love</p>
+</div>
 
-  <div class="intro">
-    this space is soft and a little scattered, like a scrapbook left open.
-    i wanted it to hold things that feel like me:
-    biology slides, butterflies, my cats, little memories, and the pink kind of world i like living in.
+<!-- ME + BIOLOGY -->
+<div class="section">
+  <div class="block cream">
+    <h2>me</h2>
+    <p>
+      i wanted this page to feel like me instead of a formal introduction.
+      something soft, pink, and a little chaotic.
+    </p>
+    <img src="IMG_6481.jpg">
   </div>
 
-  <main class="layout">
-    <section class="card me">
-      <h2>me</h2>
-      <p>
-        i wanted this page to feel personal instead of formal.
-        something more like a memory board than an introduction.
-        i love softness, light, pretty details, and collecting small things that feel meaningful.
-      </p>
-      <img src="IMG_6481.jpg" alt="Portrait photo" />
-    </section>
+  <div class="block red">
+    <h2>biology</h2>
+    <p>
+      biology makes everything feel deeper.
+      like there’s always something hidden underneath what we see.
+    </p>
+    <img src="IMG_6651.jpeg">
+  </div>
+</div>
 
-    <section class="card biology">
-      <h2>biology</h2>
-      <p>
-        i love biology because it makes the world feel intricate and alive.
-        looking through a microscope feels like finding another hidden version of life,
-        something delicate and beautiful that most people never stop to look at.
-      </p>
-      <img src="IMG_6651.jpeg" alt="Biology microscope image" />
-    </section>
+<!-- BUTTERFLY + DRINKS -->
+<div class="section">
+  <div class="block pink">
+    <h2>butterflies</h2>
+    <p>
+      my favorite mix of art and science.
+      delicate but still alive.
+    </p>
+    <img src="IMG_7529.jpeg">
+  </div>
 
-    <section class="card drinks">
-      <h2>small memories</h2>
-      <p>
-        i also wanted to include moments that feel fun and real.
-        not everything has to be serious to matter.
-        sometimes a memory is just a color, a drink, a night out, or a feeling.
-      </p>
-      <img src="IMG_9172.jpeg" alt="Drinks held in glasses" />
-    </section>
+  <div class="block cream">
+    <h2>little moments</h2>
+    <p>
+      i like keeping memories that feel simple but meaningful.
+    </p>
+    <img src="IMG_9172.jpeg">
+  </div>
+</div>
 
-    <section class="card butterfly">
-      <h2>butterflies</h2>
-      <p>
-        butterflies feel like a mix of art and biology, which is probably why i love them.
-        this one feels almost unreal, like something fragile enough to disappear if you look away too fast.
-      </p>
-      <img src="IMG_7529.jpeg" alt="Butterfly resting on a hand" />
-    </section>
+<!-- CATS -->
+<div class="section">
+  <div class="block red">
+    <h2>my cats</h2>
+    <p>
+      they make everything feel calmer and softer.
+    </p>
+    <img src="IMG_7303.jpeg">
+  </div>
 
-    <section class="card cat1">
-      <h2>my cats</h2>
-      <p>
-        my cats are one of the easiest ways to describe home.
-        they make everything softer, quieter, and sweeter.
-        i wanted them here because they are part of my everyday life.
-      </p>
-      <img src="IMG_7303.jpeg" alt="One of my cats sleeping" />
-    </section>
+  <div class="block pink">
+    <h2>christmas birthday</h2>
+    <p>
+      my birthday being on christmas makes everything feel warmer.
+    </p>
+    <img src="IMG_7379 (1).JPG">
+  </div>
+</div>
 
-    <section class="card cat2">
-      <h2>christmas + home</h2>
-      <p>
-        my birthday is on christmas, so that time of year has always felt extra personal to me.
-        lights, warmth, decorations, and my cat in the tree all somehow feel like one memory.
-      </p>
-      <img src="IMG_7379 (1).JPG" alt="Cat sitting in a Christmas tree" />
-    </section>
+<!-- FOOTER -->
+<div class="full cream">
+  <p>
+    this isn’t just a homepage, it’s a collection of things i love ♡
+  </p>
+  <div class="sticker">made with pink + memories</div>
+</div>
 
-    <section class="card note">
-      <p>
-        this homepage is less of a profile and more of a collection:
-        a pink space for living things, favorite details, and pieces of life that feel beautiful to keep.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    made with things i love ♡
-  </footer>
 </body>
 </html>
