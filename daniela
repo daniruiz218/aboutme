@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>my homepage</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
 body {
@@ -14,7 +14,6 @@ body {
   color: #5a2a3a;
 }
 
-/* header */
 .header {
   background: #f6f0dc;
   text-align: center;
@@ -32,13 +31,11 @@ body {
   font-style: italic;
 }
 
-/* grid layout */
 .section {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-/* blocks */
 .block {
   padding: 30px;
 }
@@ -59,6 +56,7 @@ body {
 .block h2 {
   font-family: 'Fredoka', sans-serif;
   font-size: 2rem;
+  margin-top: 0;
 }
 
 .block img {
@@ -67,13 +65,11 @@ body {
   margin-top: 15px;
 }
 
-/* full width section */
 .full {
   padding: 40px;
   text-align: center;
 }
 
-/* fun sticker text */
 .sticker {
   background: #ff8fab;
   display: inline-block;
@@ -82,7 +78,6 @@ body {
   margin-top: 10px;
 }
 
-/* mobile */
 @media(max-width: 800px) {
   .section {
     grid-template-columns: 1fr;
@@ -94,77 +89,95 @@ body {
 <body>
 
 <div class="header">
-  <h1>daniela's world</h1>
+  <h1>Daniela's World:)</h1>
   <p>a collection of things i love</p>
 </div>
 
-<!-- ME + BIOLOGY -->
 <div class="section">
   <div class="block cream">
-    <h2>me</h2>
+    <h2>hiii</h2>
     <p>
-      i wanted this page to feel like me instead of a formal introduction.
-      something soft, pink, and a little chaotic.
+      My name is Daniela. I’m a junior and an art major with minors in biology and
+      architecture. I work as a tech in the ER, and one day I hope to become a healthcare architect.
+      I love the idea of creating spaces that can help people heal, feel safe, and be cared for.
+      I have two kids, which are really just my cats, and they are a huge part of my life.
+      My favorite color is pink! I wanted my website to
+      feel personal and full of the things that matter to me. I’m someone who loves pretty
+      details, meaningful memories, and finding beauty in both art and science.
     </p>
-    <img src="IMG_6481.jpg">
+    <img src="IMG_6481.jpg" alt="Photo of Daniela">
   </div>
 
   <div class="block red">
     <h2>biology</h2>
     <p>
-      biology makes everything feel deeper.
-      like there’s always something hidden underneath what we see.
+      I enjoy biology and learning about life, how it forms, and how even the smallest things we
+      can’t see are still so important. I think it’s beautiful that cells and microscopic structures
+      can hold so much meaning and be the foundation of life itself. I used to be a biology major,
+      but I felt unsatisfied with what I was learning and knew I needed something that connected
+      with me more creatively. Even though I changed paths, biology is still something I deeply love
+      and feel connected to, because it reminds me how complex, fragile, and amazing life really is.
     </p>
-    <img src="IMG_6651.jpeg">
+    <img src="IMG_6651.jpeg" alt="Biology microscope image">
   </div>
 </div>
 
-<!-- BUTTERFLY + DRINKS -->
 <div class="section">
   <div class="block pink">
     <h2>butterflies</h2>
     <p>
-      my favorite mix of art and science.
-      delicate but still alive.
+      I have a very emotional connection to butterflies. When I first met my boyfriend, we went to
+      see the solar eclipse, and we saw so many butterflies that it almost felt unreal, like a dream.
+      Ever since then, seeing butterflies makes me feel so much joy. They feel gentle and meaningful
+      to me, almost like a small reminder of beautiful moments I never want to forget. I love how
+      they connect to both nature and emotion at the same time.
     </p>
-    <img src="IMG_7529.jpeg">
+    <img src="IMG_7529.jpeg" alt="Butterfly on hand">
   </div>
 
   <div class="block cream">
-    <h2>little moments</h2>
+    <h2>little memories</h2>
     <p>
-      i like keeping memories that feel simple but meaningful.
+      I included this picture because it was my first drink when I turned 21. I’m really into visuals
+      and aesthetics, and I love the joy of capturing special moments in a single photo. Sometimes a
+      picture can hold an entire feeling, a whole memory, or even a version of who you were in that
+      exact second. I like looking back at photos and remembering not just what happened, but how it
+      felt. To me, little memories deserve to be kept too.
     </p>
-    <img src="IMG_9172.jpeg">
+    <img src="IMG_9172.jpeg" alt="First drink at 21">
   </div>
 </div>
 
-<!-- CATS -->
 <div class="section">
   <div class="block red">
     <h2>my cats</h2>
     <p>
-      they make everything feel calmer and softer.
+      My cats are almost my whole life. I feel instantly happy whenever I’m around them. They were my
+      first ever pets, which makes them even more special to me. They’ve become such a big part of my
+      everyday life and bring me so much comfort and peace. Being with them makes home feel and more complete. They’re not just pets to me, they really feel like family,
+      and I can’t imagine my life without them.
     </p>
-    <img src="IMG_7303.jpeg">
+    <img src="IMG_7303.jpeg" alt="One of my cats">
   </div>
 
   <div class="block pink">
-    <h2>christmas birthday</h2>
+    <h2>christmas baby</h2>
     <p>
-      my birthday being on christmas makes everything feel warmer.
+      My birthday is on Christmas, which has always made it feel a little more magical and personal.
+      That day has always been tied to lights, warmth, decorations, and being surrounded by home.
+      I included this picture of my cat in the Christmas tree because it feels like such a perfect
+      mix of my life and the holiday. It’s funny, sweet, and chaotic in the best way. Being born on
+      Christmas makes birthdays feel different, but also really memorable.
     </p>
-    <img src="IMG_7379 (1).JPG">
+    <img src="IMG_7379 (1).JPG" alt="Cat in Christmas tree">
   </div>
 </div>
 
-<!-- FOOTER -->
 <div class="full cream">
   <p>
-    this isn’t just a homepage, it’s a collection of things i love ♡
+    all the things i love ♡
   </p>
-  <div class="sticker">made with pink + memories</div>
-</div>
+
 
 </body>
 </html>
